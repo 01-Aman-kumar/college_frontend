@@ -25,10 +25,10 @@ function App() {
         <Route path="/request-help" element={<><Header /><RequestHelpPage /><Footer /></>} />
         <Route path="/login" element={<><Header /><LoginPage /><Footer /></>} />
         <Route path="/register" element={<><Header /><RegisterPage /><Footer /></>} />
-        <Route path="track/:id" element={<TrackRequestPage />} />
+        <Route path="/track/:id" element={<TrackRequestPage />} />
         
-        <Route path="/" element={<ProtectedRoute />}>
-            <Route path="/" element={<DashboardLayout />}>
+        <Route element={<ProtectedRoute />}>
+            <Route element={<DashboardLayout />}>
                 <Route path="dashboard" element={<DashboardContent />} />
                 <Route path="active-requests" element={<ActiveRequestsPage />} />
                 <Route path="history" element={<ResponseHistoryPage />} />
