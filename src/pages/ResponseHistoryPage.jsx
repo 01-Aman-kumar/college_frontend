@@ -81,7 +81,7 @@ const ResponseHistoryPage = () => {
                                 <p><strong>Contact:</strong> {selectedRequest.contactNumber}</p>
                                 <p><strong>Victims:</strong> {selectedRequest.victimCount}</p>
                                 <p><strong>Medical Info:</strong> {selectedRequest.medicalInfo || 'N/A'}</p>
-                                {selectedRequest.image && <img src={`http://localhost:5000${selectedRequest.image}`} alt="Incident" className="img-fluid rounded" />}
+                                {selectedRequest.image && <img src={selectedRequest.image} alt="Incident" className="img-fluid rounded" />}
                             </Col>
                             <Col md={6}>
                                 <MapContainer center={[selectedRequest.location.coordinates[1], selectedRequest.location.coordinates[0]]} zoom={15} style={{ height: '300px', width: '100%' }}>
